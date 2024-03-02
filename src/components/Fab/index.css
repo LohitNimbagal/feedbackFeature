@@ -1,0 +1,37 @@
+
+.fabContainer {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    background-color: #F8F8F8;
+    bottom: 32px;
+    right: 32px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.fab {
+    background-color: #F8F8F8;
+    position: absolute;
+    top: 15px;
+    left: 18px;
+}
+
+.close {
+    background-color: #F8F8F8;
+    position: absolute;
+    top: 12px;
+    left: 10px;
+}
+
+.fabContainer:hover {
+    cursor: pointer;
+}
+
+.fabMenu{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    list-style: none;
+}

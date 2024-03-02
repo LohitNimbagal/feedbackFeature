@@ -1,0 +1,40 @@
+
+.navBar {
+    width:  1,438px;
+    height: 122px;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid var(--grayTest);
+}
+
+.logo{
+    letter-spacing: .5rem;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.logoHighlight{
+    background-color: #ffffff;
+    color: #0F0F0F;
+}
+
+.navContent{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    color: var(--grayTest);
+    font-weight: 500;
+    font-size: 24px;
+    gap: 30px;
+}
+
+.userImg{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--white);
+}

@@ -1,0 +1,39 @@
+.fabMenu {
+    width: 256px;
+    height: 440px;
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.buttonContainer{
+    width: 60px;
+    height: 60px;
+    background-color: #F8F8F8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonText{
+    padding: 1px 5px;
+    background-color: #F8F8F8;
+    border-radius: 5%;
+}
+
+.buttonImg{
+    width: 30px;
+    height: 30px;
+    background-color: #F8F8F8;
+}
+
+.listElement{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
