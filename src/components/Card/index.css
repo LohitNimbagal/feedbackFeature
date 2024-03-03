@@ -1,0 +1,41 @@
+.cardContainer{
+    position: absolute;
+    bottom: 102px;
+    right: 32px;
+}
+
+.card {
+    width: 430px;
+    max-height: 536px;
+    background-color: var(--white);
+    padding: 24px 16px 24px 16px;
+    border-radius: 8px;
+    gap: 32px;
+    position: relative;
+}
+
+.cardContent {
+    width: 398px;
+    height: 384px;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.submitButton {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    width: 114px;
+    height: 40px;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 10px 20px 10px 20px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    opacity: 0.6px;
+}

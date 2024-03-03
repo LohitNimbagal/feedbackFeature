@@ -2,7 +2,7 @@
 .fabContainer {
     width: 60px;
     height: 60px;
-    position: fixed;
+    position: absolute;
     background-color: #F8F8F8;
     bottom: 32px;
     right: 32px;

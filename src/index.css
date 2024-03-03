@@ -3,7 +3,8 @@
 :root {
   --black: #0F0F0F;
   --white: #ffffff;
-  --grayTest: #FEFEFE80;
+  --textGray: #FEFEFE80;
+  --backgroundGray: #E0E0E0;
 }
 
 * {
@@ -11,13 +12,13 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  background-color: #0F0F0F;
 }
 
 html,
 body {
   height: 100%;
   width: 100%;
+  background-color: #0F0F0F;
 }
 
 .mainScreen {
