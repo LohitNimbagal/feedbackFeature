@@ -38,7 +38,7 @@
 }
 
 .topSection {
-    width: 100%;
+    width: 90vw;
     display: flex;
     justify-content: center;
     align-items: start;
@@ -51,7 +51,7 @@
 }
 
 .selectSection {
-    width: 100%;
+    width: 90vw;
     height: 40px;
     background-color: var(--backgroundGray);
     border-radius: 8px;
@@ -63,7 +63,7 @@
 }
 
 .bottomSection {
-    width: 100%;
+    width: 90vw;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -71,7 +71,7 @@
 }
 
 .textSection {
-    width: 100%;
+    width: auto;
     height: 180px;
     position: relative;
     background-color: var(--backgroundGray);
