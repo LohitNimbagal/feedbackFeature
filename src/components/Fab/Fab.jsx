@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import './index.css'
 
-export const Fab = ({handelClick, isOpen}) => {
+export const Fab = ({handelClick, isOpen, toDown}) => {
 
     return (
         <>
-            <div className='fabContainer' onClick={handelClick}>
+            <div className='fabContainer' onClick={handelClick} style={{bottom: !toDown && '32px' }}>
                 {isOpen ?
 
                     <svg className='close' width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">

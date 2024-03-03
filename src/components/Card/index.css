@@ -1,4 +1,4 @@
-.cardContainer{
+.cardContainer {
     position: absolute;
     bottom: 102px;
     right: 32px;
@@ -6,7 +6,7 @@
 
 .card {
     width: 430px;
-    max-height: 536px;
+    height: 536px;
     background-color: var(--white);
     padding: 24px 16px 24px 16px;
     border-radius: 8px;
@@ -21,6 +21,101 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+}
+
+.cardHeader {
+    background-color: transparent;
+    border-bottom: solid var(--backgroundGray);
+    text-align: center;
+    font-weight: 600;
+    color: #4D4D4D;
+    padding-bottom: 10px;
+}
+
+.headerBold {
+    color: var(--black);
+    font-weight: 800;
+}
+
+.topSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px
+}
+
+.selectLabel {
+    width: 398px;
+}
+
+.selectSection {
+    width: 100%;
+    height: 40px;
+    background-color: var(--backgroundGray);
+    border-radius: 8px;
+    padding: .5rem;
+    color: #333333;
+    border: none;
+    outline: none;
+}
+
+.bottomSection {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px
+}
+
+.textSection {
+    width: 398px;
+    height: 180px;
+    position: relative;
+    background-color: var(--backgroundGray);
+    border-radius: 8px;
+    padding: .5rem;
+    color: #333333;
+}
+
+.textSection textarea {
+    width: 385px;
+    height: 100%;
+    background-color: var(--backgroundGray);
+    padding: .1rem;
+    border-radius: 8px;
+    color: #333333;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.attachButton {
+    position: absolute;
+    bottom: 10px;
+    width: 102px;
+    height: 32px;
+    padding: 6px;
+    border-radius: 4px;
+    border: none;
+    background-color: #C7C7C7;
+    font-size: medium;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.textSection input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.textSection input::before {
+    content: 'Attach';
+    font-size: medium;
+}
+
+.textSection input:hover {
+    cursor: pointer;
 }
 
 .submitButton {
@@ -38,4 +133,24 @@
     justify-content: center;
     gap: 8px;
     opacity: 0.6px;
+}
+
+.submitButton.disabled {
+    opacity: 0.6;
+    outline: none;
+    border: none;
+}
+
+@media screen and (max-width: 640px) {
+    .cardContainer {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+    }
+
+    .card {
+        min-width: 100%;
+        border-top-left-radius: 30px ;
+        border-top-right-radius: 30px ;
+    }
 }

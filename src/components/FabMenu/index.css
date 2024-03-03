@@ -4,13 +4,14 @@
     position: absolute;
     bottom: 32px;
     right: 32px;
-    gap: 15px;
+    gap: 13px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: end;
+    justify-content: center;
 }
 
-.buttonContainer{
+.buttonContainer {
     width: 60px;
     height: 60px;
     background-color: #F8F8F8;
@@ -20,24 +21,30 @@
     justify-content: center;
 }
 
-.buttonText{
+.buttonText {
     padding: 1px 5px;
     background-color: #F8F8F8;
     border-radius: 5%;
 }
 
-.buttonImg{
+.buttonImg {
     width: 30px;
     height: 30px;
     background-color: #F8F8F8;
 }
 
-.listElement{
+.listElement {
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
-.listElement:hover{
+.listElement:hover {
     cursor: pointer;
+}
+
+@media screen and (max-width: 640px) {
+    .fabMenu {
+        bottom: 550px
+    }
 }

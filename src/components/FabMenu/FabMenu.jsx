@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 import './index.css'
 
-export const FabMenu = ({setOpenCard}) => {
-
-    const [toDown, setToDown] = useState(false)
+export const FabMenu = ({setOpenCard, setToDown, toDown}) => {
 
     const fabMenuContent = [
         {
@@ -60,7 +58,8 @@ export const FabMenu = ({setOpenCard}) => {
 
     return (
         <>
-            <ul className='fabMenu' style={{ flexDirection: toDown ? 'row' : 'column' }}>
+            <ul className='fabMenu' style={{ flexDirection: toDown ? 'row' : 'column', 
+            bottom: !toDown && '32px' }}>
                 {
                     fabMenuContent.map((item) => (
                         <li className='listElement' id={item.title} onClick={handelClick} key={item.title}>
