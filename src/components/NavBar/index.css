@@ -38,6 +38,12 @@
 }
 
 @media screen and (max-width: 640px ) {
+
+    .navBar{
+
+        background-color: green;
+    }
+
     .navContent{
         display: none;
     }
