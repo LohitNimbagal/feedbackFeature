@@ -30,12 +30,11 @@ body {
 }
 
 .loginButton {
+  z-index: 0;
   padding: .5rem;
 }
 
 .rightCorner {
-  min-width: 426px;
-  min-height: 440px;
   position: absolute;
   bottom: 32px;
   right: 32px;
