@@ -14,7 +14,7 @@ export const ContactCard = ({ loggedIn }) => {
         <div className='cardContainer'>
             <div className='card' style={{ height: !loggedIn && '636px' }}>
                 <div className='cardHeader'>
-                    Let us know about the <span className='headerBold'>Issue</span> <br /> you are facing right now!
+                Get in <span className='headerBold'>Contact with us</span> <br /> for your queries!
                 </div>
 
                 <div className='cardContent'>

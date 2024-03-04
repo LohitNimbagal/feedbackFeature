@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import './index.css'
-import {EmailSection} from '../ui/EmailSection'
+import {TextInput} from '../ui/TextInput'
 
 
 export const SuggestionCard = ({loggedIn}) => {
@@ -51,7 +51,7 @@ export const SuggestionCard = ({loggedIn}) => {
                     </div>
 
                     {!loggedIn &&
-                        <EmailSection />
+                        <TextInput label={'Your Email'} type={'email'} />
                     }
                 </div>
 

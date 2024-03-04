@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import {EmailSection} from '../ui/EmailSection'
+import { TextInput } from '../ui/TextInput'
 
 import './index.css'
 
@@ -52,7 +52,7 @@ export const IssueCard = ({ loggedIn }) => {
                     </div>
 
                     {!loggedIn &&
-                        <EmailSection />
+                        <TextInput label={'Your Email'} type={'email'} />
                     }
                 </div>
 
