@@ -13,8 +13,7 @@
 }
 
 .cardContent {
-    width: 398px;
-    height: 384px;
+    padding: 3px;
     margin-top: 16px;
     display: flex;
     flex-direction: column;
@@ -28,6 +27,7 @@
     font-weight: 600;
     color: #4D4D4D;
     padding-bottom: 10px;
+    
 }
 
 .headerBold {
@@ -41,12 +41,9 @@
     justify-content: center;
     align-items: start;
     flex-direction: column;
-    gap: 5px
+    gap: 5px;   
 }
 
-.selectLabel {
-    width: 398px;
-}
 
 .selectSection {
     width: 100%;

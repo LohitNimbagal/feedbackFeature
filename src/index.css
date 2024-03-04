@@ -34,8 +34,8 @@ body {
 }
 
 .rightCorner {
-  width: 426px;
-  height: 440px;
+  min-width: 426px;
+  min-height: 440px;
   position: absolute;
   bottom: 32px;
   right: 32px;
