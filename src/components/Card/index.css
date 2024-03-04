@@ -1,7 +1,5 @@
 .cardContainer {
-    position: absolute;
-    bottom: 102px;
-    right: 32px;
+    position: relative;
 }
 
 .card {
@@ -164,12 +162,6 @@
 }
 
 @media screen and (max-width: 640px) {
-    .cardContainer {
-        position: absolute;
-        bottom: 0px;
-        right: 0px;
-    }
-
     .card {
         width: 100vw;
         border-top-left-radius: 30px ;

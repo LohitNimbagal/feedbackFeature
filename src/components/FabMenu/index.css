@@ -1,12 +1,6 @@
 .fabMenu {
-    width: 426px;
-    height: 440px;
-    position: absolute;
-    bottom: 32px;
-    right: 32px;
     gap: 13px;
     display: flex;
-    flex-direction: row;
     align-items: end;
     justify-content: center;
 }
@@ -44,8 +38,3 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 640px) {
-    .fabMenu {
-        bottom: 550px;
-    }
-}

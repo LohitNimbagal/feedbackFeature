@@ -29,6 +29,55 @@ body {
   justify-content: center;
 }
 
-.loginButton{
+.loginButton {
   padding: .5rem;
+}
+
+.rightCorner {
+  width: 426px;
+  height: 440px;
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+  display: flex;
+  gap: 13px;
+  flex-direction: column;
+  align-items: end;
+  justify-content: end;
+}
+
+.buttons{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 13px;
+  order: 2;
+}
+
+.fabButton{
+  order: 2;
+}
+
+.menuButtons{
+  order: 1;
+}
+
+.cardComponent{
+  order: 1;
+}
+
+@media screen and (max-width: 640px) {
+
+  .rightCorner{
+    bottom: 0px;
+    right: 0px;
+  }
+
+  .cardComponent{
+    order: 2;
+  }
+
+  .buttons{
+    order: 1;
+  }
 }
