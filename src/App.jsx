@@ -12,6 +12,7 @@ export const App = () => {
 
   const [isOpen, setIsOpen] = useState(false)
   const [toDown, setToDown] = useState(false)
+  const [loggedIn, setLoggedIn] = useState(false)
   const [openCard, setOpenCard] = useState(null)
 
   const handelClick = () => {
@@ -20,11 +21,18 @@ export const App = () => {
     setToDown(false)
   }
 
+  const handelLogin = () => {
+    setLoggedIn(!loggedIn)
+  }
+
   return (
     <>
       <NavBar />
 
       <div className='mainScreen'>
+
+        <button className='loginButton' onClick={handelLogin}>{loggedIn ? 'LogOut' : 'LogIn'}</button>
+
         <Fab handelClick={handelClick} isOpen={isOpen} setToDown={setToDown} toDown={toDown}/>
 
         {
@@ -32,13 +40,13 @@ export const App = () => {
           <FabMenu setOpenCard={setOpenCard} openCard={openCard} toDown={toDown} setToDown={setToDown}/>
         }
 
-        {openCard && openCard === 'Report an Issue' && <IssueCard />
+        {openCard && openCard === 'Report an Issue' && <IssueCard loggedIn={loggedIn}/>
 
-          || openCard === 'Share Feedback' && <FeedbackCard />
+          || openCard === 'Share Feedback' && <FeedbackCard loggedIn={loggedIn}/>
           
-          || openCard === 'Give Suggestion' && <SuggestionCard />
+          || openCard === 'Give Suggestion' && <SuggestionCard loggedIn={loggedIn}/>
 
-          || openCard === 'Contact Us' && <ContactCard />
+          || openCard === 'Contact Us' && <ContactCard loggedIn={loggedIn}/>
         }
       </div>
     </>

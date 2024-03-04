@@ -17,7 +17,7 @@
 .cardContent {
     width: 398px;
     height: 384px;
-    margin-top: 24px;
+    margin-top: 16px;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -68,6 +68,15 @@
     justify-content: center;
     flex-direction: column;
     gap: 5px
+}
+
+.checkBox{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    gap: 5px;
+    font-size: 14px;
+    color: #4D4D4D;
 }
 
 .textSection {
@@ -121,6 +130,14 @@
     cursor: pointer;
 }
 
+.loggedInCheck{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px
+}
+
 .submitButton {
     position: absolute;
     bottom: 10px;
@@ -136,6 +153,8 @@
     justify-content: center;
     gap: 8px;
     opacity: 0.6px;
+    font-weight: 600;
+    font-size: 18px;
 }
 
 .submitButton.disabled {

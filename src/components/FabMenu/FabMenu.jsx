@@ -42,6 +42,8 @@ export const FabMenu = ({setOpenCard, setToDown, toDown}) => {
         },
     ]
 
+    const [liId, setLiId] = useState(null)
+
     const handelClick = (e) => {
 
         let liElement = e.target;
@@ -50,8 +52,8 @@ export const FabMenu = ({setOpenCard, setToDown, toDown}) => {
         }
 
         if (liElement) {
-            const liId = liElement.id;
-            setOpenCard(liId)
+            setLiId(liElement.id)
+            setOpenCard(liElement.id)
             setToDown(true)
         }
     }
@@ -67,7 +69,7 @@ export const FabMenu = ({setOpenCard, setToDown, toDown}) => {
                                 {item.title}
                             </p>
 
-                            <div className='buttonContainer'>
+                            <div className='buttonContainer' style={{outline: liId === item.title ? 'solid 3px #808080' : 'none'}}>
                                 {item.svg}
                             </div>
                         </li>

@@ -1,8 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
 import './index.css'
+import {EmailSection} from '../ui/EmailSection'
 
-export const FeedbackCard = () => {
+
+export const FeedbackCard = ({ loggedIn }) => {
 
     const [text, setText] = useState(null)
 
@@ -30,6 +32,15 @@ export const FeedbackCard = () => {
                             </div>
                         </div>
                     </div>
+
+                    <div className='checkBox'>
+                        <input type="checkbox" />
+                        <label>Send feedback anonymously</label>
+                    </div>
+
+                    {!loggedIn &&
+                        <EmailSection />
+                    }
                 </div>
 
                 <button className={`submitButton ${text?.length > 0 ? 'enable' : 'disabled'}`} onClick={() => console.log('clicked')} disabled={text?.length === 0}>Submit</button>

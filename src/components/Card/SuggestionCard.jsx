@@ -1,8 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
 import './index.css'
+import {EmailSection} from '../ui/EmailSection'
 
-export const SuggestionCard = () => {
+
+export const SuggestionCard = ({loggedIn}) => {
 
     const options=['Concept Card', 'Interview Questions', 'Practice questions', 'Quizzes', 'Others']
 
@@ -47,6 +49,10 @@ export const SuggestionCard = () => {
                             </div>
                         </div>
                     </div>
+
+                    {!loggedIn &&
+                        <EmailSection />
+                    }
                 </div>
 
                 <button className={`submitButton ${text?.length > 0 ? 'enable' : 'disabled'}`} onClick={() => console.log('clicked')} disabled={text?.length === 0}>Submit</button>

@@ -30,6 +30,7 @@
 
 @media screen and (max-width: 640px) {
     .fabContainer {
-        bottom: 550px
+        bottom: 550px;
+        backdrop-filter: grayscale(30%);
     }
 }
