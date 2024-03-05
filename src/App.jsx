@@ -3,10 +3,9 @@ import { NavBar } from "./components/NavBar/NavBar"
 import { Fab } from "./components/Fab/Fab"
 import { useState } from "react"
 import { FabMenu } from './components/FabMenu/FabMenu'
-import { IssueCard } from './components/Card/IssueCard'
-import { FeedbackCard } from './components/Card/FeedbackCard'
-import { SuggestionCard } from './components/Card/SuggestionCard'
-import { ContactCard } from './components/Card/ContactCard'
+import { CardComp } from './components/Card/CardComp'
+import { Notification } from './components/Notification/Notification'
+
 
 export const App = () => {
 
@@ -14,6 +13,8 @@ export const App = () => {
   const [toDown, setToDown] = useState(false)
   const [loggedIn, setLoggedIn] = useState(false)
   const [openCard, setOpenCard] = useState(null)
+  const [feedback, setFeedBack] = useState(null)
+  const [showNote, setshowNote] = useState(false)
 
   const handelClick = () => {
     setIsOpen(!isOpen)
@@ -25,6 +26,18 @@ export const App = () => {
     setLoggedIn(!loggedIn)
   }
 
+  const handelSubmit = () => {
+    console.log("submited")
+    setOpenCard(false)
+    setToDown(false)
+    setIsOpen(false)
+    setshowNote(true)
+  }
+
+  setTimeout(() => {
+    setshowNote(false)
+  }, 9000);
+
   return (
     <>
       <NavBar />
@@ -35,7 +48,7 @@ export const App = () => {
 
         <div className='rightCorner'>
 
-          <div className='buttons' style={{flexDirection: toDown && 'row'}}>
+          <div className='buttons' style={{ flexDirection: toDown && 'row' }}>
 
             <div className='fabButton' >
               <Fab handelClick={handelClick} isOpen={isOpen} setToDown={setToDown} toDown={toDown} />
@@ -47,17 +60,15 @@ export const App = () => {
                 <FabMenu setOpenCard={setOpenCard} openCard={openCard} toDown={toDown} setToDown={setToDown} />
               }
             </div>
+
+            {
+              showNote && <Notification />
+            }
+
           </div>
 
           <div className='cardComponent'>
-            {openCard && openCard === 'Report an Issue' && <IssueCard loggedIn={loggedIn} />
-
-              || openCard === 'Share Feedback' && <FeedbackCard loggedIn={loggedIn} />
-
-              || openCard === 'Give Suggestion' && <SuggestionCard loggedIn={loggedIn} />
-
-              || openCard === 'Contact Us' && <ContactCard loggedIn={loggedIn} />
-            }
+            <CardComp loggedIn={loggedIn} openCard={openCard} handelSubmit={handelSubmit} />
           </div>
         </div>
       </div>

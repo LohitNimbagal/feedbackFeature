@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
 import { TextInput } from '../ui/TextInput'
-
 import './index.css'
 
 export const IssueCard = ({ loggedIn }) => {
