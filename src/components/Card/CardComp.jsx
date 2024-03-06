@@ -4,7 +4,7 @@ import { FeedbackCard } from './FeedbackCard';
 import { SuggestionCard } from './SuggestionCard';
 import { ContactCard } from './ContactCard';
 
-export const CardComp = ({ loggedIn, openCard, handelSubmit }) => {
+export const CardComp = ({ loggedIn, openCard, handelSubmit, showNote }) => {
     let cardComponent;
 
     switch (openCard) {

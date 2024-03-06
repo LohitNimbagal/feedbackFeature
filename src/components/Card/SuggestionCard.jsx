@@ -4,7 +4,7 @@ import './index.css'
 import {TextInput} from '../ui/TextInput'
 
 
-export const SuggestionCard = ({loggedIn}) => {
+export const SuggestionCard = ({loggedIn, handelSubmit }) => {
 
     const options=['Concept Card', 'Interview Questions', 'Practice questions', 'Quizzes', 'Others']
 
@@ -55,7 +55,7 @@ export const SuggestionCard = ({loggedIn}) => {
                     }
                 </div>
 
-                <button className={`submitButton ${text?.length > 0 ? 'enable' : 'disabled'}`} onClick={() => console.log('clicked')} disabled={text?.length === 0}>Submit</button>
+                <button className={`submitButton ${text?.length > 0 ? 'enable' : 'disabled'}`} onClick={handelSubmit} disabled={text?.length === 0}>Submit</button>
 
             </div>
         </div>

@@ -1,15 +1,17 @@
 .box {
-    width: 350px;
-    height: 75px;
-    background-color: black;
-    color: #fff;
+    width: auto;
+    height: auto;
+    background-color: var(--white);
+    color: var(--black);
     padding: 10px;
     position: relative;
     float: left;
     border-radius: .2rem;
+    font-size: smaller;
+    font-weight: 700;
 }
 
-.box.arrow-top {
+.box.arrow-bottom {
     margin-top: 30px;
 }
 
@@ -17,8 +19,8 @@
     content: " ";
     position: absolute;
     right: 20px;
-    bottom: -15px;
-    border-top: 15px solid black;
+    bottom: -10px;
+    border-top: 15px solid var(--white);
     border-right: 15px solid transparent;
     border-left: 15px solid transparent;
     border-bottom: none;

@@ -13,12 +13,11 @@ export const App = () => {
   const [toDown, setToDown] = useState(false)
   const [loggedIn, setLoggedIn] = useState(false)
   const [openCard, setOpenCard] = useState(null)
-  const [feedback, setFeedBack] = useState(null)
   const [showNote, setshowNote] = useState(false)
 
   const handelClick = () => {
     setIsOpen(!isOpen)
-    setOpenCard(false)
+    setOpenCard(null)
     setToDown(false)
   }
 
@@ -27,16 +26,17 @@ export const App = () => {
   }
 
   const handelSubmit = () => {
-    console.log("submited")
-    setOpenCard(false)
+    setshowNote(true)
     setToDown(false)
     setIsOpen(false)
-    setshowNote(true)
   }
 
-  setTimeout(() => {
-    setshowNote(false)
-  }, 9000);
+  if (showNote) {
+    setTimeout(() => {
+      setshowNote(false)
+      setOpenCard(null)
+    }, 1000);
+  }
 
   return (
     <>
@@ -62,13 +62,15 @@ export const App = () => {
             </div>
 
             {
-              showNote && <Notification />
+              showNote && <Notification openCard={openCard} />
             }
 
           </div>
 
           <div className='cardComponent'>
-            <CardComp loggedIn={loggedIn} openCard={openCard} handelSubmit={handelSubmit} />
+            {!showNote &&
+              <CardComp loggedIn={loggedIn} openCard={openCard} handelSubmit={handelSubmit} showNote={showNote} />
+            }
           </div>
         </div>
       </div>

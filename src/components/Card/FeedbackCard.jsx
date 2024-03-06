@@ -4,7 +4,7 @@ import './index.css'
 import {TextInput} from '../ui/TextInput'
 
 
-export const FeedbackCard = ({ loggedIn }) => {
+export const FeedbackCard = ({ loggedIn, handelSubmit }) => {
 
     const [text, setText] = useState(null)
 
@@ -43,7 +43,7 @@ export const FeedbackCard = ({ loggedIn }) => {
                     }
                 </div>
 
-                <button className={`submitButton ${text?.length > 0 ? 'enable' : 'disabled'}`} onClick={() => console.log('clicked')} disabled={text?.length === 0}>Submit</button>
+                <button className={`submitButton ${text?.length > 0 ? 'enable' : 'disabled'}`} onClick={handelSubmit} disabled={text?.length === 0}>Submit</button>
 
             </div>
         </div>

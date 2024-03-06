@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { TextInput } from '../ui/TextInput'
 import './index.css'
 
-export const IssueCard = ({ loggedIn }) => {
+export const IssueCard = ({ loggedIn, handelSubmit  }) => {
 
     const options = ['Concept Card', 'Interview Questions', 'Practice questions', 'Quizzes']
 
@@ -55,7 +55,7 @@ export const IssueCard = ({ loggedIn }) => {
                     }
                 </div>
 
-                <button className={`submitButton ${text?.length > 0 ? 'enable' : 'disabled'}`} onClick={() => console.log('clicked')} disabled={text?.length === 0}>Submit</button>
+                <button className={`submitButton ${text?.length > 0 ? 'enable' : 'disabled'}`} disabled={text?.length === 0} onClick={handelSubmit}>Submit</button>
 
             </div>
         </div>
